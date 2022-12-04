@@ -1,10 +1,11 @@
 import React from 'react'
-import {useSelector,useDispatch} from "react-redux"
+import {useSelector} from "react-redux"
 
 function Profile() {
     const user=useSelector((state)=>state.user.value) 
+    const themes=useSelector((state)=>state.theme.value)
   return (
-    <div>
+    <div style={{color:themes}}>
     <h1>Name:{user.name}</h1>
     <p>Age:{user.age}</p>
     <p>Email:{user.email}</p>
